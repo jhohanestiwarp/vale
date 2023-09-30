@@ -1,0 +1,58 @@
+<div class="row content-recover">
+  <div class="col-12 col-sm-12 col-md-6 imagen-back">
+    <img class="imagen-generate" src="../../../assets/images/logoSyngenta.png" alt="" />
+  </div>
+
+  <div class="col-12 col-sm-12 col-md-6 Autoraizer__formulario">
+
+    <div class="Autoraizer__formulario__conten col-12 col-md-6 align-items-center">
+      <div class="Autoraizer__formulario-generate-code ">
+
+        <div class="Autoraizer__formulario-generate-code__generate__TextCode">
+          <div class="Autoraizer__formulario-generate-code__generate__title"><span class="bold-32 mb-4">Recuperar<br>
+              contraseña</span>
+          </div>
+        </div>
+
+        <div class="Autoraizer__formulario-generate-code__generate__inputCode ">
+
+          <div class="Autoraizer__formulario-generate-code__generate__input mb-3">
+            <form>
+              <mat-form-field appearance="fill">
+                <mat-label>Número de identificación</mat-label>
+                <input matInput placeholder="Número de identificación" (focus)="onInputFocus(hide1)"
+                  (blur)="onInputBlur(hide1)">
+              </mat-form-field>
+            </form>
+          </div>
+
+          <div class="Autoraizer__formulario-generate-code__generate__recapcha mb-3">
+
+            <div class="captcha">
+              <re-captcha (resolved)="resolved($event)" siteKey={{this.keyCaptcha}}></re-captcha>
+              <div *ngIf="submitted && (captcha == '' || this.captcha == null)">
+                <div class="error-login error-captcha">Confirmacion de re-Captcha es requerida</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="Autoraizer__formulario-generate-code__generate__disclaimer mb-4">
+
+            <span class="regular-16 ">A tu correo electrónico o número de celular registrados llegará el código de
+              verificación.</span>
+
+          </div>
+
+          <div class="col-12">
+            <button class="generate_btn" type="submit">Obtener código</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
